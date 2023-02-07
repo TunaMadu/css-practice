@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeeee4;
+}
+
+section {
+  background-color: rgb(90, 170, 170);
+  padding: 1rem;
+}
+
+.child {
+  padding: 0.5rem;
+}
+
+.child-one {
+  background-color: burlywood;
+}
+.child-two {
+  background-color: wheat;
+}
+
+.child-three {
+  background-color: yellowgreen;
+}
+
+.child-four {
+  background-color: cornsilk;
+}
+
+.child-five {
+  background-color: rgb(168, 91, 168);
+}
+/***************************************************************************************************/
+/* generic styling ends here. */
+/***************************************************************************************************/
+
+.parent {
+  position: relative;
+  height: 200vh;
+}
+
+.child-one {
+  /* if we set things relative, we can manipulate its position relative to where it would be on the page relative to the html structure. This does not affect other elements, as in, if we slap a relative to the element, it wont completly take it out of context casuing everything to shift.*/
+  /* * we can position things relative to where its at on the page :) */
+  position: relative;
+  top: 250px;
+  left: 5px;
+  bottom: 4px;
+}
+
+.child-two {
+  /* unlike relative when we position something absolutly we take it out the context entirely, then position it however we like. by default it positions it off the window but if a parent is has a position relative, then will absolutly position it relative to the parent. */
+  position: absolute;
+  top: 3px;
+  left: 50%;
+}
+
+.child-three {
+  /* fixed on the other hand will position something at a fixed position based on the window.*/
+  position: fixed;
+  left: 50%;
+  z-index: 1;
+}
+
+.child-four {
+  /* sticky is pretty cool though as it combines the ideas of relative and fixed. where ever the element is located relative to the html structure, it will sitck/fixated at that position, 
+  * in plain english:
+   as we reach 10 px relative to child four, its position will be fixed  just like in child three. but unlike three, we do not entirely take it out of context, it will just stick to this position :)
+   * almost as if it gets caught by some magnet and doesnt let go of the it until its back to where it was relative to the html structure!
+   */
+
+  position: sticky;
+  top: 10px;
+}
