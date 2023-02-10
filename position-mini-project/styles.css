@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #f8efe7;
+}
+
+section {
+  height: 95vh;
+  max-width: 90rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.circle {
+  padding: 2.2em;
+  border-radius: 100%;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.circle-1 {
+  background-color: #ef6f6c;
+}
+.circle-2 {
+  padding: 6em;
+  top: 70%;
+  left: 30%;
+  background-color: #bf5956;
+}
+.circle-3 {
+  padding: 11em;
+  top: 70%;
+  left: 73%;
+  background-color: #426a5a;
+}
+.circle-4 {
+  padding: 3em;
+  left: 73%;
+  top: 27%;
+  background-color: #426a5a;
+}
+.circle-5 {
+  padding: 7em;
+  left: 30%;
+  top: 28%;
+  background-color: #ffffff;
+}
