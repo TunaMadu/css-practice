@@ -34,7 +34,7 @@ div {
   margin: 0 auto;
 }
 
-/* when working with widths its important to know that when it comes to positioning things on the screen you have to define some width ie: making elements be a specific size within elements: element 1 take 50%, element 2 take 10% ..... if we dont define what size the element should be, the browser wont know what the size of the element should be and will leave everything as default. Because remember, block level elements take up as much space as it can, to limit this then you have to define some width*/
+/* when working with widths its important to know that when it comes to positioning things on the screen you have to define some width. if we dont define what size the element should be, the browser wont know what the size of the element should be and will leave everything as default. Because remember, block level elements take up as much space as it can, to limit this then you have to define some width*/
 
 .inline-block-example {
   max-width: 120rem;
@@ -45,6 +45,7 @@ a {
   display: block;
   width: 50%;
   margin: 0 auto;
+  text-align: center;
   background-color: aqua;
 }
 
@@ -63,4 +64,15 @@ a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+span {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin-left: 40px;
+}
+
+.one {
+  margin-right: 10px;
 }
