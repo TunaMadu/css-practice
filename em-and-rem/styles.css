@@ -1,0 +1,34 @@
+body {
+  background-color: wheat;
+}
+
+html {
+  font-size: 16px;
+}
+
+div {
+  /* border-top: 1px solid red; */
+  margin-left: 3rem;
+}
+/* p {
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+} */
+
+.example-1 {
+  font-size: 4em;
+}
+
+.example-2 {
+  font-size: 20px;
+}
+
+.example-3 {
+  font-size: 2em;
+}
+
+/* bottom line */
+/* 
+*   em's are really interesting to work with, though at the same time you have to be careful with how we size things with em. This compoounding effect can lead to wrong sizes down the line!
+
+*/

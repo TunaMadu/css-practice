@@ -1,0 +1,41 @@
+body {
+  background-color: darkgray;
+  max-width: 120rem;
+}
+
+div {
+  width: 500px;
+  margin: 0 auto;
+  background-color: antiquewhite;
+  padding: 3rem;
+  margin-bottom: 2rem;
+}
+
+p,
+a {
+  outline: 2px solid orchid;
+}
+
+p {
+  /* since this is a simple block level element, padding margin will affect its size */
+
+  margin: 2rem 1rem;
+  padding: 2rem;
+}
+
+/* 
+
+though when thigns becomes shakey is when we have a inline element. margin and padding will not work the same as it does with block level elements!
+*/
+a {
+  margin: 0.1rem;
+  padding: 5rem 1rem;
+  /* when we make the padding larger on the top. it doesnt move push the element.*/
+  /* rather than doing ->,,, we do <-,,, inline elements do not break the layout they run inline :)   */
+}
+
+.button {
+  /* now that we have a inline block element we get the best of both worlds. we take up as much space as we need for the content. and we can have styles affect the entire element unlike just having things as inline! */
+  display: inline-block;
+  margin-top: 10rem;
+}

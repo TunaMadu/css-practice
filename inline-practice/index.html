@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div>
+      <p>this is a simple paragraph</p>
+      <a href="#"> and this is a link</a>
+    </div>
+    <div>
+      <!-- although this looks very similar to the original example. you can see that the inline element styles will not break the layout, we cant add height, though we can add things on L or R because it doesnt break the flow of the content!-->
+      <p>
+        this is a simple paragraph <a href="#"> and this is a link</a>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+        maxime nobis voluptates et optio aspernatur dicta odio labore numquam
+        exercitationem! Voluptas maxime quasi numquam adipisci odit alias
+        repellendus exercitationem suscipit.
+      </p>
+    </div>
+
+    <!-- but if we have something like this -->
+    <div>
+      <p>this is a simple paragraph</p>
+      <a href="#" class="button"> and this is a link</a>
+    </div>
+
+    <div>
+      <p>
+        this is a simple paragraph
+        <!-- now we're affecting the layout of the element inside because now we have a inline block! -->
+        <a href="#" class="button"> and this is a link</a> Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Reiciendis sint repellat provident
+        veniam quam, vero adipisci sit at aliquid quisquam doloribus incidunt
+        voluptates quaerat, odio ut ex ipsam architecto quae?
+      </p>
+    </div>
+  </body>
+</html>
