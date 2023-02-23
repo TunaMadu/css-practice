@@ -1,0 +1,56 @@
+body {
+  max-width: 120rem;
+  margin: 0 auto;
+  background-color: rgb(103, 91, 91);
+}
+
+div {
+  text-align: center;
+}
+.smaller-example {
+  margin-top: 100px;
+  background-color: rgb(138, 132, 144);
+}
+
+p {
+  font-size: 1.5em;
+}
+p + p {
+  /* in a sense the siblings selector says. select only the siblings of p. We dont want the oldest P! hence why we call it sibling selector :)*/
+
+  margin-top: 2rem;
+  outline: springgreen dotted 3px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+.smaller-example p ~ p {
+  /* when use the ~ , its using similar logic as +. Any p that might not have a sibling above itself can now be selected because they share a common parent*/
+  margin-top: 2rem;
+  outline: springgreen dotted 3px;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+}
+
+/* now in terms of specificity. it looks likes it raises it a bit becuase when use a normal p+p we have a 0 0 2 whereas as something like ~ we have 0 1 2 though this is because we have a class selector combined as well!*/
+
+/* 
+though when it comes to any of the three combinator selectors, we are going to recursively apply the styles to all the elements that fit the bill!
+* use a > to only select direct childrens of something!
+*/
+
+/* *this is not a Combinator selector! */
+section.increases.specifitiy {
+  /* in this case when we select something with no spaces we call this a compound selector!*/
+  /* if an element has more than class we increase the specifity of some style by doing something like this! */
+  font-size: xx-small;
+}
+
+/* 
+
+? normally when we use styles. we find ourselves working with regular class selectors or combinators, we rarely have to increase specificity though its important to know how to do so if needed
+
+combinator =/= compound!
+
+*at the same time seeing that we can get away with not naming every element does make our html much easier to work with ngl
+*/

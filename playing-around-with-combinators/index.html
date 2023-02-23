@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>playing around with combinators</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="top">
+      <div>
+        <!-- even though theres a div in here. it doesnt matter. using combinators without > will recurrsivly find elements that fit the bill! -->
+        <p>I cant be styled, theres no P above me!</p>
+        <div>
+          <p>I cant be styled, theres no P above me!</p>
+          <p>But i can get styled because im a sibling!</p>
+        </div>
+        <p>I cant be styled, theres no P above me!</p>
+        <p>i can get styled!</p>
+        <p>i can get styled!</p>
+        <p>i can get styled!</p>
+        <p>i can get styled!</p>
+        <span>im a span</span>
+        <p>I cant be styled, theres no P above me!</p>
+        <p>i can get styled!</p>
+        <p>i can get styled!</p>
+        <p>i can get styled!</p>
+        <p>i can get styled!</p>
+        <p>i can get styled!</p>
+        <p>i can get styled!</p>
+      </div>
+    </div>
+    <div class="top smaller-example">
+      <p>I cant be styled, theres no P above me!</p>
+      <div>
+        <p>I cant be styled, theres no P above me!</p>
+        <p>But i can get styled because im a sibling!</p>
+      </div>
+      <p>I share a common parent so i can be styled!!</p>
+      <p>i can get styled!</p>
+
+      <span>im a span</span>
+      <p>I share a common parent so i can be styled!</p>
+      <p>i can get styled!</p>
+    </div>
+  </body>
+</html>
