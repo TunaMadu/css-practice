@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+}
+
+body {
+  background-color: beige;
+  font-size: 4em;
+  padding-inline: 2rem;
+  max-width: 120rem;
+}
+
+.item1 {
+  background-color: antiquewhite;
+}
+
+.item2 {
+  background-color: azure;
+}
+
+.item3 {
+  background-color: rgb(229, 206, 172);
+}
+
+/* 
+
+    when it comes to flex, the main point of confusion comes from understanding how it aligns. for startes we have justify and align.
+    justify justifies things on L and R 
+    aligin aligns things Up and Down
+    * are these behaviors flipped when we use column?
+    yes
+    * are these behaviors different to grid?
+    no and thats the point of confusion. when it comes to flex and grid, the properties of justify and align are the same.(iff flex left at default)
+    a good rule of thumb justify affects inline, align affects block
+
+    * now then the only thing that still gets us is when to use either content or items.
+    for the most part when it aligning things LR use content. if we want to align the items in a specific way we use items.
+    * when we use align content, we only use align content in flex to determine how rows should be spaced
+
+    TlDR
+    use justify for L and R
+    use align for up and down.
+    use justify content for the most part, use align items to align items 
+    when working with multiple rows with flex, use align content to adjust how the rows should be spaced!
+
+*/
+
+.container {
+  /* justify-content: center; */
+  /* gap: 1rem; */
+  align-items: flex-end;
+}
+
+/* thats one clarification done, the other has to do with how items grow/shrink */
+/* 
+    * FLEX DOESNT AFFECT THE FLEXBOX ITSSELF. BUT RATHER THE ITEMS IN THE FLEX BOX!
+    so when we want things to be able to grow or shrink depending on on the size of the current flex box, we have to slap a flex onto the item we want to crontrol. pretty neat.
+
+    -  by default the items will not grow, but can shrink. (as flex container shrinks the items will also shrink) basis set to auto 
+    - if we set the flex to auto it will now grow and shrink  with basis set to auto
+    - if we set it to 1 however.it does the same as auto, though will set the basis to be 0 (this more or less sets everything to be the same YUP)
+
+    flex: basis sets the starting width of the items.empathsis on starting width!
+*/
+
+/* 
+
+ To wrap up
+  in this small example, we're setting a size for the items in the flecbox. 
+  by default the sizes will be 200, 200, 500. But beacuse items 2 and  3 have a grow property it will grow farther than its original width because it can grow to fill up the space!
+
+  so intially the size for item 2  and item 3 will be larger than its original because they can grow within the container
+
+  when it comes to grow and shrink proeprties, this will grow/shrink by a scale factor. if we cant fit we use the scale factor to shrink the item, by default its set to a scale factor of 1 so everything will look even, but if we change it it will look much smaller or larger based on the scale factor.
+
+  same thing goes with grow. if we have enough space to grow, the items will grow with some scale factor to fill up the empty space! the higher the scale the larger it will look since it can grow much more!
+
+  *it will try to be that size and adjust accordingly to fit, its grow and shrink properties will adjust how much it should shrink or grow based on their scale factor!*
+*/
+.item2 {
+  flex-grow: 1;
+}
+.item3 {
+  /* flex-shrink: 44; */
+  flex-grow: 4;
+  flex-basis: 600px;
+}
+
+/* item 3 will grow four times as much as item2, item 3 looks much larger than 2. */
