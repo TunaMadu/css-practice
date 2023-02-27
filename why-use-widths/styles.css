@@ -1,0 +1,95 @@
+body {
+  background-color: aliceblue;
+}
+
+div {
+  background-color: antiquewhite;
+}
+/* 
+here the parent element is the div. and b/c we dont define some specific width, 50% will be based on the current display! 
+another note here, because we define some width for the element, we can adjust the margin around the element as well though granted we dont collapse margins like we learned before!
+*/
+
+.no-default {
+  outline: pink 4px solid;
+  padding-top: 1px;
+}
+
+/* 
+see in this example, we have a case in which we're callopsing margins!
+because the inner child has a higher margin top than the parent^^ we're collapsing margins!
+a preferred solution of mine is if i want to rearrange something ina parent use padding, parent? margins, though if we're in a crunch, we can 
+* set the parent with some padding which will seperate both their margins avoiding this margin collapse in the first place.
+and we push this even further with simply adding 1px of padding which is enough to seperate both margins!
+*/
+.no-default > p {
+  width: 50%;
+  margin-inline: auto;
+  margin-top: 100px;
+  outline: pink 3px solid;
+}
+/* 
+* an alternative solution to this problem is to use dieplay Flow root or just do a margin reset!!!
+*/
+
+.default {
+  max-width: 120rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.half-of-half {
+  background-color: rgba(42, 55, 65, 0.529);
+  width: 50%;
+  margin: 0 auto;
+}
+
+.lets-half {
+  width: 50%;
+  outline: 1px red solid;
+  margin: 0 auto;
+}
+
+/* when working with widths its important to know that when it comes to positioning things on the screen you have to define some width. if we dont define what size the element should be, the browser wont know what the size of the element should be and will leave everything as default.Because remember, block level elements take up as much space as it can, to limit this then you have to define some width*/
+
+.inline-block-example {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+a {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: aqua;
+}
+
+/* an interesting thing to point out is that although inline block does give us the best of both worlds between inline and block. we cant center it as easy with using margins! thats probably why many choose to make images as block level elements!*/
+.yes p {
+  display: inline-block;
+  width: 25%;
+  /* margin: 0 auto; */
+  background-color: rgb(255, 255, 0);
+}
+
+/* how do we deal with something like this? we an change it to a block level element OR we can use flexbox! who would've known that flexbox was p flexiable */
+
+.yes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+span {
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  margin-left: 40px;
+}
+
+.one {
+  margin-right: 10px;
+}
